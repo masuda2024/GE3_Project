@@ -1135,8 +1135,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 	ModelData modelData = LoadObjFile("resources", "plane.obj");
 
 
-
-
 	//         []
     //         []
     // [][][][][]
@@ -1446,10 +1444,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
 #pragma endregion
 
-	
-
-
-
+	//カメラのリセット
 	bool cameraReset = false;
 
 #pragma region Sprite
