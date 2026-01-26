@@ -164,7 +164,7 @@ struct FormatChunk
 
 struct SoundData
 {
-	//波形のフォーマット
+	//波形のフォーマット/
 	WAVEFORMATEX wfex;
 	//バッファの先頭アドレス
 	BYTE* pBuffer;
