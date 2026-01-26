@@ -28,3 +28,4 @@ jobs:
       - name: Build
         run: |
             msbuild ${{env.SOLUTION_FILE_PATH}}/p:Pratform=x64,Configuration=$ {{env.CONFIGURATION}}
+            jobs.<job_id>.steps[*].run:
