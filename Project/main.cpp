@@ -98,7 +98,7 @@ Transform uvTransformSprite
 };
 //      Oo
 	//   [>[二]
-	//
+	///
 	//
 Transform cameraTransform
 {
