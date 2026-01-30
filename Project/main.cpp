@@ -99,7 +99,7 @@ Transform uvTransformSprite
 //      Oo
 	//   [>[二]
 	///
-	//
+	///
 Transform cameraTransform
 {
 	{1.0f,1.0f,1.0f},
