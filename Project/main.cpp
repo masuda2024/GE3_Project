@@ -1556,9 +1556,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 		ImGui::ColorEdit4("material", &materialData->color.x, ImGuiColorEditFlags_AlphaPreview);
 		//ImGui::ColorEdit4("Color", &materialData->color.x);
 		ImGui::DragFloat3("Transform", &transformSprite.translate.x, -0.18f, 0.18f);
-		ImGui::SliderAngle("RotateX", &transformSprite.rotate.x, -0.5f, 0.5f);
-		ImGui::SliderAngle("RotateY", &transformSprite.rotate.y, -0.5f, 0.5f);
-		ImGui::SliderAngle("RotateZ", &transformSprite.rotate.z, -0.5f, 0.5f);
+		ImGui::SliderAngle("RotateX", &transformSprite.rotate.x);
+		ImGui::SliderAngle("RotateY", &transformSprite.rotate.y);
+		ImGui::SliderAngle("RotateZ", &transformSprite.rotate.z);
 		
 		ImGui::Checkbox("AutoSpriteRotate-X", &autoSpriteRotateX);
 		ImGui::Checkbox("AutoSpriteRotate-Y", &autoSpriteRotateY);
