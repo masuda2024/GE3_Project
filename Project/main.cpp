@@ -96,10 +96,10 @@ Transform uvTransformSprite
 	{0.0f,0.0f,0.0f},
 	{0.0f,0.0f,0.0f}
 };
-    //      Oo
-	//   [>[二]
-	//
-	//
+//      Oo
+//   [>[二]
+//
+//
 Transform cameraTransform
 {
 	{1.0f,1.0f,1.0f},
