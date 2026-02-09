@@ -471,7 +471,7 @@ ModelData LoadObjFile(const std::string& directoryPath, const std::string& filen
 	return modelData;
 }
 
-/*
+/**/
 // 音声データの読み込み
 SoundData SoundLoadWave(const char* filename)
 {
@@ -555,8 +555,8 @@ void SoundUnload(SoundData* soundData)
 	soundData->bufferSize = 0;
 	soundData->wfex = {};
 }
-*/
-/*
+
+/**/
 // 音声再生
 void SoundPlayWave(Microsoft::WRL::ComPtr<IXAudio2> xAudio2, const SoundData& soundData)
 {
@@ -578,7 +578,7 @@ void SoundPlayWave(Microsoft::WRL::ComPtr<IXAudio2> xAudio2, const SoundData& so
 	result = pSourceVoice->Start();
 
 }
-*/
+
 
 
 // Windowsアプリでのエントリーポイント(main関数)
@@ -908,7 +908,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 		{
 			OutputDebugStringA("Hit 0\n"); // 出力ウィンドウに「Hit ０」と表示
 			// テクスチャ変更
-			sprite->ChangeTexture("Resources/uvChecker.png");
+			//sprite->ChangeTexture("Resources/uvChecker.png");
 		}
 
 		// y軸回転処理
@@ -940,9 +940,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 		ImGui::SliderFloat("SpritePosY", &tranaformSprite.translate.y, 0.0f, 500.0f);
 
 		// ライトの向き
-		ImGui::SliderFloat("directionX", &directionalLightData->direction.x, -10.0f, 10.0f);
-		ImGui::SliderFloat("directionY", &directionalLightData->direction.y, -10.0f, 10.0f);
-		ImGui::SliderFloat("directionZ", &directionalLightData->direction.z, -10.0f, 10.0f);
+		//ImGui::SliderFloat("directionX", &directionalLightData->direction.x, -10.0f, 10.0f);
+		//ImGui::SliderFloat("directionY", &directionalLightData->direction.y, -10.0f, 10.0f);
+		//ImGui::SliderFloat("directionZ", &directionalLightData->direction.z, -10.0f, 10.0f);
 
 		// SRVの切り替え
 		ImGui::Checkbox("UseMonsterBall", &useMonsterBall);
@@ -975,21 +975,21 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
 		// モデル
 		// RootSignatureを設定。PSOに設定しているけど別途設定が必要
-		//dxCommon->GetCommandList()->IASetVertexBuffers(0, 1, &vertexBufferView); // VBVを設定
+	    dxCommon->GetCommandList()->IASetVertexBuffers(0, 1, &vertexBufferView); // VBVを設定
 
 		// マテリアルCBufferの場所を設定
-		//dxCommon->GetCommandList()->SetGraphicsRootConstantBufferView(0, materialResource->GetGPUVirtualAddress());
+		dxCommon->GetCommandList()->SetGraphicsRootConstantBufferView(0, materialResource->GetGPUVirtualAddress());
 		// wvp用とWorld用のCBufferの場所を設定
-		//dxCommon->GetCommandList()->SetGraphicsRootConstantBufferView(1, transResource->GetGPUVirtualAddress());
+		dxCommon->GetCommandList()->SetGraphicsRootConstantBufferView(1, transResource->GetGPUVirtualAddress());
 		// SRVのDescriptorTableの先頭を設定。2はrootParameter[2]である。
 		//dxCommon->GetCommandList()->SetGraphicsRootDescriptorTable(2, useMonsterBall ? textureSrvHandleGPU2 : textureSrvHandleGPU);
 		// 平行光源
-		//dxCommon->GetCommandList()->SetGraphicsRootConstantBufferView(3, directionalLightResource->GetGPUVirtualAddress());
+		dxCommon->GetCommandList()->SetGraphicsRootConstantBufferView(3, directionalLightResource->GetGPUVirtualAddress());
 
 		// インデックスバッファビューを設定
-		//dxCommon->GetCommandList()->IASetIndexBuffer(&indexBufferViewVertex);
+		dxCommon->GetCommandList()->IASetIndexBuffer(&indexBufferViewVertex);
 		// インデックスを使って描画（球）
-		//dxCommon->GetCommandList()->DrawInstanced(UINT(modelData.vertices.size()), 1, 0, 0);
+		dxCommon->GetCommandList()->DrawInstanced(UINT(modelData.vertices.size()), 1, 0, 0);
 
 		// スプライト描画
 		sprite->Draw();
@@ -1012,7 +1012,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 	ImGui::DestroyContext();
 
 	// 解放
-	//CloseHandle(dxCommon->fenceEvent);
+	CloseHandle(dxCommon->fenceEvent);
 
 	// 音声データ解放
 	//xAudio2.Reset();

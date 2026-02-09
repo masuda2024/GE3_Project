@@ -5,6 +5,9 @@
 #include <algorithm>
 #include <cassert>
 #include "externals/DirectXTex-mar2023/DirectXTex/DirectXTex.h"
+#include "externals/DirectXTex-mar2023/DirectXTex/d3dx12.h"
+
+
 
 #include <wrl.h>          // ComPtr
 #include <d3d12.h>        // ID3D12Resource
@@ -17,12 +20,6 @@ class DirectXCommon;
 class TextureManager 
 {
 public:
-
-
-	D3D12_GPU_DESCRIPTOR_HANDLE GetSrvHandleGPU(uint32_t index);
-
-
-
 
 	// テクスチャ1枚分のデータ
 	struct TextureData
@@ -51,7 +48,7 @@ public:
 	// SRVインデックスの開始番号
 	uint32_t GetTextureIndexByFilePath(const std::string& filePath);
 	// テクスチャ番号からGPUハンドルを取得
-	//D3D12_GPU_DESCRIPTOR_HANDLE GetSrvHandleGPU(uint32_t textureIndex);
+	D3D12_GPU_DESCRIPTOR_HANDLE GetSrvHandleGPU(uint32_t textureIndex);
 	// メタデータ取得
 	const DirectX::TexMetadata& GetMetaData(uint32_t textureIndex);
 

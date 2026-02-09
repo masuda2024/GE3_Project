@@ -1,6 +1,8 @@
 #include "TextureManager.h"
 #include "DirectXCommon.h"
 #include "StringUtility.h"
+
+
 using namespace StringUtility;
 
 
@@ -114,7 +116,7 @@ uint32_t TextureManager::GetTextureIndexByFilePath(const std::string& filePath)
 	assert(0);
 	return 0;
 }
-/*
+/**/
 // テクスチャ番号からGPUハンドルを取得
 D3D12_GPU_DESCRIPTOR_HANDLE TextureManager::GetSrvHandleGPU(uint32_t textureIndex) 
 {
@@ -124,7 +126,7 @@ D3D12_GPU_DESCRIPTOR_HANDLE TextureManager::GetSrvHandleGPU(uint32_t textureInde
 	TextureData& textureData = textureDatas[textureIndex];
 	return textureData.srvHandleGPU;
 
-}*/
+}
 
 // メタデータ取得
 const DirectX::TexMetadata& TextureManager::GetMetaData(uint32_t textureIndex)
@@ -135,8 +137,8 @@ const DirectX::TexMetadata& TextureManager::GetMetaData(uint32_t textureIndex)
 	TextureData& textureData = textureDatas[textureIndex];
 	return textureData.metadata;
 }
-
+/*
 D3D12_GPU_DESCRIPTOR_HANDLE TextureManager::GetSrvHandleGPU(uint32_t index)
 {
 	return textureDatas[index].srvHandleGPU;
-}
+}*/

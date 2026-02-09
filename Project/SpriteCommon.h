@@ -18,7 +18,7 @@ public:
 	DirectXCommon* GetDxCommon() const { return dxCommon_; }
 
 private:
-	// ルートシグネイチャ
+	// ルートシグネチャ
 	Microsoft::WRL::ComPtr <ID3D12RootSignature> rootSignature = nullptr;
 	D3D12_INPUT_LAYOUT_DESC inputLayoutDesc{};
 	D3D12_INPUT_ELEMENT_DESC inputElementDescs[3] = {};
