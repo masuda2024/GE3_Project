@@ -4,6 +4,15 @@ struct Matrix4x4
 
 	float m[4][4];
 };
+/*
+struct Vector2
+{
+	float x;
+	float y;
+};*/
+
+
+
 struct Vector3 
 {
 	float x, y, z;
@@ -48,4 +57,3 @@ namespace MatrixMath
 	Vector3 Cross(const Vector3& v1, const Vector3& v2);
 
 }
-
