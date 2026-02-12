@@ -1,4 +1,3 @@
-#include "Matrix4x4.h"
 #include <Windows.h>
 #include <cstdint>
 #include <string>
@@ -13,6 +12,7 @@
 #include <numbers>
 #include <dxgidebug.h>
 #include <dxcapi.h>
+
 // Debug用
 #include <dbghelp.h>
 #include <strsafe.h>
@@ -39,17 +39,21 @@
 #include"Engine/base/DirectXCommon.h"
 #include"Engine/base/StringUtility.h"
 
-#include"TextureManager.h"
-#include"Sprite.h"
-#include"SpriteCommon.h"
+#include"Engine/2d/TextureManager.h"
+#include"Engine/2d/Sprite.h"
+#include"Engine/2d/SpriteCommon.h"
 
 
 
 
 
+#include "Engine/math/Matrix4x4.h"
+#include "Engine/math/Vector2.h"
+#include "Engine/math/Vector4.h"
 
-#include "Vector2.h"
-#include "Vector4.h"
+
+
+
 
 #define _USE_MATH_DEFINES
 #include <cmath> 

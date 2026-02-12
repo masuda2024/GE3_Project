@@ -22,6 +22,9 @@
     <Filter Include="io">
       <UniqueIdentifier>{0d2d775e-9d87-49ac-b065-1c37387b047a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{1d5aafe0-7440-42a3-88e7-2ea65f79b19f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="externals\imgui\imgui.cpp">
@@ -48,7 +51,7 @@
     <ClCompile Include="main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Matrix4x4.cpp">
+    <ClCompile Include="Engine\math\Matrix4x4.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="D3DResourceLeakChecker.cpp">
@@ -69,13 +72,13 @@
     <ClCompile Include="Engine\io\Input.cpp">
       <Filter>io</Filter>
     </ClCompile>
-    <ClCompile Include="SpriteCommon.cpp">
+    <ClCompile Include="Engine\2d\SpriteCommon.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Sprite.cpp">
+    <ClCompile Include="Engine\2d\Sprite.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="TextureManager.cpp">
+    <ClCompile Include="Engine\2d\TextureManager.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -104,19 +107,19 @@
     <ClInclude Include="externals\imgui\imstb_truetype.h">
       <Filter>imgui</Filter>
     </ClInclude>
-    <ClInclude Include="Matrix4x4.h">
+    <ClInclude Include="Engine\math\Matrix4x4.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="D3DResourceLeakChecker.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Vector3.h">
+    <ClInclude Include="Engine\math\Vector3.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Vector4.h">
+    <ClInclude Include="Engine\math\Vector4.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Vector2.h">
+    <ClInclude Include="Engine\math\Vector2.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="VertexData.h">
@@ -137,13 +140,13 @@
     <ClInclude Include="Engine\io\Input.h">
       <Filter>io</Filter>
     </ClInclude>
-    <ClInclude Include="SpriteCommon.h">
+    <ClInclude Include="Engine\2d\SpriteCommon.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Sprite.h">
+    <ClInclude Include="Engine\2d\Sprite.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="TextureManager.h">
+    <ClInclude Include="Engine\2d\TextureManager.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

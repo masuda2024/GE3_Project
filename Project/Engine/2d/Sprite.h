@@ -21,9 +21,9 @@
 #include <dinput.h>
 #include <cmath>
 
-#include "Matrix4x4.h"
-#include "Vector2.h"
-#include "Vector4.h"
+#include "Engine/math/Matrix4x4.h"
+#include "Engine/math/Vector2.h"
+#include "Engine/math/Vector4.h"
 
 class SpriteCommon;
 class WinApp;
